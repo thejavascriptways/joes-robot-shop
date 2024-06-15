@@ -200,4 +200,11 @@ export class CatalogComponent {
     return this.filter === '' ? this.products
       : this.products.filter((p) => p.category === this.filter);
   }
+
+  getDiscountedClasses(product : IProduct) {
+    if (product.discount > 0)
+      return ['strikethrough'];
+    else return [];
+  }
+
 }

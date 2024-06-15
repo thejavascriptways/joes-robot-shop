@@ -78,3 +78,11 @@
     margin-top: -15px;
     color: #d25ca1;
   }
+  a {
+    font-weight: bold;
+  }
+
+  .strikethrough{
+    text-decoration: line-through;
+    font-size: 18px;
+  }
