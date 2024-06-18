@@ -9,6 +9,7 @@ import { IProduct } from './product.model';
 export class CatalogComponent {
   products: IProduct[];
   filter: string = '';
+  cart: IProduct[] = [];
 
   constructor() {
     this.products = [
@@ -205,6 +206,12 @@ export class CatalogComponent {
     if (product.discount > 0)
       return ['strikethrough'];
     else return [];
+  }
+
+  addToCart(product: IProduct) {
+    this.cart.push(product);
+    console.log(`product ${product.name} added to the cart`);
+    alert(`product ${product.name} added to the cart`);
   }
 
 }
